@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HorseController!{% endblock %}
+
+
+{% block body %}
+    <div class="wrapper">
+        <table class="race">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>RaceCount</th>
+                <th>Wins</th>
+                <th>Position</th>
+                <th>Bet</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in 0..9 %}
+                <tr>
+                    <td>{{ race.orderedList[i].name }}-{{ race.orderedList[i].id }}</td>
+                    <td>{{ race.orderedList[i].racesCount }}</td>
+                    <td>{{ race.orderedList[i].win }}</td>
+
+                    <td>{{ i+1 }}</td>
+                    <td><a href="traitement.php"><button>click</button></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
