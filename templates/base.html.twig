@@ -3,24 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/mainTheme.css')}}"> {% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/mainTheme.css')}}">
+            <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        {% endblock %}
+
     </head>
     <body>
         <header>
-            <div class="headerBackground">
-                <div>
-                    <h1>Welcome To Turf Lord <br> Click on the Horse and Win the Money !!!</h1>
+                <div class="logo">
+                    <h1><span class="anton">Welcome To Turf Lord </span><br> <span class="logo-small">Click on the Horse & Get the Money !!!</span></h1>
                 </div>
-
-            </div>
-
         </header>
         <nav>
             <ul>
                 <li>
-                    <a href="" alt="">Races</a>
-                    <a href="" alt="">Results</a>
-                    <a href="" alt="">Horses</a>
+                    <a href="{{ path('race') }}" alt="">Races</a>
+                    <a href="{{ path('result') }}" alt="">Results</a>
+                    <a href="{{ path('horse') }}" alt="">Horses</a>
                 </li>
             </ul>
         </nav>
